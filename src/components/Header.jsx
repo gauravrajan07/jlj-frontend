@@ -16,8 +16,8 @@ const Header = () => {
     ]
 
     return (
-        <header style={{ backgroundColor: '#771313' }}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
+        <header style={{ backgroundColor: '#771313', overflowX: 'hidden', width: '100%' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem', paddingBottom:'8px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '60px', paddingTop: '8px' }}>
                     {/* Logo */}
                     <Link to="/" style={{ flexShrink: 0 }}>
@@ -54,7 +54,7 @@ const Header = () => {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <button 
+                    <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         style={{ color: 'white', background: 'none', border: 'none', cursor: 'pointer' }}
                         className="md:hidden hover:opacity-80"

@@ -86,7 +86,7 @@ const HomePage = ({ papers }) => {
     ]
 
     return (
-        <div className="bg-white">
+        <div className="bg-white" style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
             {/* Hero Section */}
             <section style={{ backgroundColor: '#e8e4db', padding: '2rem 1rem' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -116,7 +116,7 @@ const HomePage = ({ papers }) => {
                             Latest Publications (Live)
                         </h2>
                     </div>
-                    
+
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                         {papers && papers.length > 0 ? (
                             papers.map((paper) => {
@@ -130,7 +130,7 @@ const HomePage = ({ papers }) => {
                                         <p style={{ fontSize: '9px', marginBottom: '6px' }}>
                                             <span style={{ color: '#771313', fontWeight: 'bold', letterSpacing: '0.05em' }}>NEW ARTICLE</span>
                                         </p>
-                                        
+
                                         <h3 style={{ fontSize: '20px', fontFamily: 'serif', color: '#4b3342', marginBottom: '12px', fontWeight: '500' }}>
                                             {title}
                                         </h3>
@@ -150,8 +150,8 @@ const HomePage = ({ papers }) => {
                             })
                         ) : (
                             <div style={{ textAlign: 'center', padding: '2rem', color: '#949494', fontStyle: 'italic' }}>
-                                Loading papers... <br/>
-                                <span style={{fontSize: '10px'}}>(Make sure your Strapi backend is running at http://localhost:1337)</span>
+                                Loading papers... <br />
+                                <span style={{ fontSize: '10px' }}>(Make sure your Strapi backend is running at http://localhost:1337)</span>
                             </div>
                         )}
                     </div>
