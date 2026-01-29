@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     // 1. Define the base URL
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:1337'
+    const apiUrl = 'https://cms.legalpapers.in'
     console.log("Fetching from:", apiUrl);
 
     // 2. FETCH FROM THE CORRECT ENDPOINT
@@ -32,7 +32,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-grow">
+        <main className="grow">
           <Routes>
             <Route path="/" element={<HomePage papers={papers} />} />
             <Route path="/submissions" element={<SubmissionsPage />} />
