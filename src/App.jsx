@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     // 1. Define the base URL
-    const apiUrl = 'https://cms.legalpapers.in'
+    const apiUrl = 'http://localhost:1337'
     console.log("Fetching from:", apiUrl);
 
     // 2. FETCH FROM THE CORRECT ENDPOINT
